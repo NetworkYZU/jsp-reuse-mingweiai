@@ -8,6 +8,16 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+       <%
+            double value=Math.random();
+            String url="";
+            if(value>0.5){
+                url="/WEB-INF/hello1.jsp";
+            }
+            else{
+                url="/WEB-INF/hello2.jsp";
+            }
+            %>
+            <jsp:forward page="<%=url%>"/>
     </body>
 </html>
